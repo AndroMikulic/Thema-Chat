@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#">
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<head style="min-width: 512px; height: 48px;">
+    <title>Thema</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:50,100,200,300,400,500" rel="stylesheet">
+    <a onclick="LeaveChat('/')" class="pageName">Thema</a>
+    <img src="/images/info.png" class="infoIcon" onclick="LeaveChat('/info')">
+    <meta property="og:image:secure_url" content="https://thema.chat/images/icon.png">
+
+    <!-- For Google -->
+    <meta name="keywords" content="thema chat webapp random topic online talk" />
+    <meta name="description" content="Talk about something specific with someone random." />
+    <meta name="author" content="Andro Mikulić" />
+    <meta name="copyright" content="Andro Mikulić" />
+    <meta name="application-name" content="Thema" />
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Thema.chat" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:image" content="/images/social-share.png" />
+    <meta property="og:url" content="https://thema.chat/" />
+    <meta property="og:description" content="Talk about something specific with someone random." />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="Thema - online chat" />
+    <meta name="twitter:title" content="Thema.chat" />
+    <meta name="twitter:description" content="Talk about something specific with someone random." />
+    <meta name="twitter:image" content="/images/social-share.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=HERE GOES YOUR GOOGLE ANALYTICS ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'HERE GOES YOUR GOOGLE ANALYTICS ID');
+    </script>
+
+</head>
+
+<body style="background-color: #1e293e; min-height: calc(100% - 48px); overflow: auto">
+    <div class="main" id="intro">
+        <div class="question">
+            Talk about:
+        </div>
+        <input class="topic" type="text" id="topic" maxlength="32" placeholder="Write what you want to talk about!">
+        <div class="spinner" style="display:block; visibility:hidden" id="spinner"></div>
+        <button class="findMatch" onclick="FindMatch()" id="findButton">Talk!</button>
+        <br>
+        <div class="randomTopic" id="randomTopic"></div>
+        <br>
+        <br>
+        <div style="width:100%; text-align: center;">
+            <img src="/images/facebook.png" class="shareIcon" onclick="facebookShare()">
+            <img src="/images/twitter.png" class="shareIcon" onclick="twitterShare()">
+        </div>
+    </div>
+
+    <div class="main" id="main" style="display: none">
+        <div class="selectedTopic" id="commonTopic">Test tekst</div>
+        <div class="textbox" id="textbox"></div>
+        <div class="typing" id="typingIndicator" style="visibility:hidden">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <input type="text" class="msgBox" id="msgBox" placeholder="Type a message! ENTER to send">
+    </div>
+</body>
+
+<script src="/scripts/getRandomTopic.js"></script>
+<script src="/scripts/shareSite.js"></script>
+<script src="/scripts/chatManager.js"></script>
+
+</html>

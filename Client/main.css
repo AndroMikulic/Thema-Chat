@@ -1,0 +1,352 @@
+html, body {
+  height: 100%;
+}
+
+.pageName {
+  display:inline-block;
+  font-family:'Comfortaa'; 
+  font-size: 16pt;
+  color: #56E39F;
+  margin:8px;
+}
+
+.pageName:hover {
+  cursor: pointer;
+  color: #EF6F6C;
+  text-decoration: underline;
+}
+
+.infoIcon {
+  border: none;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  float: right;
+}
+
+.infoIcon:hover{
+  cursor: pointer;
+  background-color: rgba(239, 110, 108, 0.25);
+  box-shadow: 0px 0px 4px 4px rgba(239, 110, 108, 0.25);
+}
+
+.chatIcon {
+  border: none;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  float: right;
+}
+
+.chatIcon:hover{
+  cursor: pointer;
+  background-color: rgba(239, 110, 108, 0.25);
+  box-shadow: 0px 0px 4px 4px rgba(239, 110, 108, 0.25);
+}
+
+.main {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 128px;
+  margin-bottom: 32px;
+  width: 768px;
+  max-width: 94vw;
+  overflow-y: auto;
+}
+.topic {
+  margin-top: 4px;
+  font-family: 'Comfortaa';
+  font-weight: 50;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 100%;
+  height: 64px;
+  border-radius: 64px;
+  border-width: 0px;
+  border-color: white;
+  border-style: solid;
+  background-color: #EF6F6C;
+  color: white;
+  text-align: center;
+  font-size: 14pt;
+}
+
+.topic::placeholder{
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.topic:focus{
+  outline: none;
+}
+
+.findMatch {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  background: #56E39F;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  display: block;
+  width: 33%;
+  height: 64px;
+  border-radius: 64px;
+  border-width: 0px;
+  color: black;
+  text-align: center;
+  font-size: 16pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.findMatch:active{
+  background-color: rgb(57, 153, 107);
+}
+
+.findMatch:focus{
+  outline: none;
+}
+
+.question {
+  width: 100%; 
+  text-align: center;
+  color: #56E39F; 
+  font-size: 24pt;
+  padding-bottom: 16px;
+  font-family: 'Comfortaa'
+}
+
+.randomTopic {
+  margin-bottom: 16px;
+  font-family: 'Comfortaa';
+  font-size: 12pt;
+  height: 12pt;
+  color: #56E39F;
+  text-align: center;
+}
+
+.selectedTopic {
+  width: 768px;
+  max-width: 94vw;
+  text-align: left;
+  color: #56E39F; 
+  font-size: 24pt;
+  font-family: 'Comfortaa';
+  margin-bottom: 4px;
+}
+
+.textbox {
+  font-family: 'Comfortaa';
+  width: 100%;
+  height: 512px;
+  background-color: #c7dcff;
+  border-radius: 32px;
+  color: #1f4e37;
+  overflow-y: auto;
+  padding: 16px;
+  font-size: 12pt;
+}
+
+.serverMessage {
+  font-family: 'Comfortaa';
+  width: 100%;
+  max-width: 90%;
+  color: #EF6F6C;
+  word-wrap: break-word
+}
+
+.myMessage {
+  font-family: 'Comfortaa';
+  width: 80%;
+  max-width: 80%;
+  margin-right: 0%;
+  margin-left: auto;
+  color: #1f4e37;
+  text-align: right;
+  word-wrap: break-word
+}
+
+.partnerMessage {
+  font-family: 'Comfortaa';
+  width: 80%;
+  max-width: 80%;
+  margin-right: auto;
+  margin-left: 0%;
+  color: #1f4e37;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.msgBox {
+  font-family: 'Comfortaa';
+  background-color: #c7dcff;
+  height: 48px;
+  font-size: 12pt;
+  width: calc(100% - 0px);
+  border-radius: 24px;
+  border-width: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-right: 16px;
+  color: #1f4e37;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.msgBox:focus{
+  outline: none;
+}
+
+.sendMsg {
+  display: inline-block;
+  border-radius: 24px;
+  border-width: 0px;
+  width: 48px;
+  height: 48px;
+  color: white;
+  padding: 0px;
+  background-color: #EF6F6C;
+  text-align: center;
+}
+
+.sendMsg:focus{
+  outline: none;
+}
+
+.donateButton {
+  margin: 32px;
+  background-color: #EF6F6C;
+  color: white;
+  width: 128px;
+  height: 48px;
+  border-width: 0px;
+  border-radius: 24px;
+  font-size: 16pt;
+  font-family: "Comfortaa";
+}
+
+.donateButton:focus{
+  outline: none;
+}
+
+.shareIcon {
+  width:40px;
+  height:40px;
+  margin: 8px;
+}
+
+.shareIcon:hover {
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#EF6F6C; 
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(148, 69, 68); 
+}
+
+/* Finding partner indicator */
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: white;
+
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* Typing indicator */
+
+.typing {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: auto;
+  width: 70px;
+  text-align: center;
+}
+
+.typing > div {
+  width: 12px;
+  height: 12px;
+  background-color: #ef6f6c;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 0.9s infinite ease-in-out both;
+  animation: sk-bouncedelay 0.9s infinite ease-in-out both;
+}
+
+.typing .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.typing .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

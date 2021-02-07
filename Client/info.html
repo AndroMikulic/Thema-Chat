@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" style="overflow:auto;">
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<head style="min-width: 512px; height: 48px">
+    <title>Thema Info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:50,100,200,300,400,500" rel="stylesheet">
+    <a href="/" class="pageName">Thema</a>
+    <img src="/images/chat.png" class="chatIcon" onclick="document.location='/'">
+    <meta property="og:image:secure_url" content="https://thema.chat/images/icon.png" />
+
+    <!-- For Google -->
+    <meta name="keywords" content="thema chat webapp random topic online talk" />
+    <meta name="description" content="Talk about something specific with someone random." />
+    <meta name="author" content="Andro Mikulić" />
+    <meta name="copyright" content="Andro Mikulić" />
+    <meta name="application-name" content="Thema" />
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="Thema.chat" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:image" content="/images/social-share.png" />
+    <meta property="og:url" content="https://thema.chat/" />
+    <meta property="og:description" content="Talk about something specific with someone random." />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="Thema - online chat" />
+    <meta name="twitter:title" content="Thema.chat" />
+    <meta name="twitter:description" content="Talk about something specific with someone random." />
+    <meta name="twitter:image" content="/images/social-share.png" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=HERE GOES YOUR GOOGLE ANALYTICS ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'HERE GOES YOUR GOOGLE ANALYTICS ID');
+    </script>
+
+</head>
+
+<body style="background-color: #1e293e; min-height: calc(100% - 48px); overflow: auto">
+    <div class="main" id="intro" style="margin-top:64px">
+        <div style="width:100%; color:#56E39F; text-align: center; font-family: Comfortaa; font-size: 18pt">
+            <h1 style="font-size:24pt">Stats</h1> <br>
+            <div id="usersWaiting">People waiting for a match: </div> <br>
+            <div id="lastTopic">Last topic entered: </div> <br>
+        </div>
+        <br>
+        <div style="width:100%; color:#56E39F; text-align: center; font-family: Comfortaa; font-size: 14pt">
+            <h1 style="font-size:24pt">About</h1> <br>
+            Talk with others about any specific topic you'd like.<br>
+            After entering something you'd like to talk about,<br>
+            you will be paired with a person who typed in<br>
+            the exact same thing (not case sensitive, though).<br>
+            <br>
+            Have fun, have respect and enjoy!
+            <br>
+            <br>
+            This site has no ads, so a donation to keep it running is appreciated.
+            <br>
+            <button class="donateButton" onclick="window.open('https://www.paypal.me/AndroMikulic');">Donate</button>
+        </div>
+    </div>
+</body>
+
+<script src="/scripts/getStats.js"></script>
+
+</html>
