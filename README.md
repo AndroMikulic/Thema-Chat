@@ -26,5 +26,5 @@ Written in HTML, CSS and JavaScript. Used socket.io for socket connections.
 
 
 ### Check out my websites!
-## [RumpledCode - Portfolio website](https://rumpledcode.com)
-## [Double Lens Solutions](https://double-lens.com)
+#### [RumpledCode - Portfolio website](https://rumpledcode.com)
+#### [Double Lens Solutions](https://double-lens.com)
